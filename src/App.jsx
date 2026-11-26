@@ -1,20 +1,20 @@
 import './App.css'
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
+import Register from './pages/Register'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import OperatorDashboard from './pages/operator/OperatorDashboard'
 import TraderDashboard from './pages/trader/TraderDashboard'
-import Home from './Home'
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/Login"/>}/>
-        <Route path="/Login" element={<Login />}/>
-        <Route path="/AdminDashboard" element={<AdminDashboard/>}/>
-        <Route path="/OperatorDashboard" element={<OperatorDashboard/>}/>
-        <Route path="TraderDashboard" element={<TraderDashboard/>}/>
-        <Route path="/Home" element={<Home/>}/>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/operator" element={<OperatorDashboard />} />
+        <Route path="/trader" element={<TraderDashboard />} />
       </Routes>
     </BrowserRouter>
   )

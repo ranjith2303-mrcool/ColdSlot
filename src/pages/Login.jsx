@@ -1,23 +1,28 @@
-import '../App.css'
-import { useState } from 'react'
+import { LoginSchema } from "../components/Formschema/LoginSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 function Login() {
-  const [Email, setEmail] = useState('')
-  const [Pass, setPass] = useState('')
-  const formsubmit=(event)=>{
-  event.preventDefault();
-  console.log('Email:',Email)
-  console.log('Password:',Pass)
-};
-return (<>
-  <div className="Login">
-    <h1>COLD SLOT LOGIN</h1>
-  </div>
-  <form onSubmit={formsubmit}>
-    <input type="email" required placeholder="Enter Email" name="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />   
-    <input type="password" required placeholder="Enter Password" name="password" value={Pass} onChange={(e) => setPass(e.target.value)} />   
-    <button type="submit">Login</button>
-  </form>
-  </>
-  )
+  const navigate = useNavigate();
+  const {register,handleSubmit,formState: { errors },} = useForm({
+    resolver: zodResolver(LoginSchema),
+  });
+  function onSubmit(data) {
+    console.log(data);
+    alert("Login Success");
+    navigate("/admin");
+  }
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <h2>Login</h2>
+      <label htmlFor="email">Email</label>
+      <input id="email" type="email" placeholder="Enter your email" {...register("email")} />
+      <p>{errors.email?.message}</p>
+      <label htmlFor="password">Password</label>
+      <input id="password" type="password" placeholder="Enter your password" {...register("password")} />
+      <p>{errors.password?.message}</p>
+      <button type="submit">Login</button>
+    </form>
+  );
 }
-export default Login
+export default Login;
