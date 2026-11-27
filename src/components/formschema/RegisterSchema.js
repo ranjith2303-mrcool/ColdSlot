@@ -4,7 +4,5 @@ export const RegisterSchema=z.object({
   email:z.string().email("Enter a valid email"),
   password:z.string().min(8,"Password must contain at least 8 characters"),
   age:z.coerce.number().min(18,"Age should be at least 18"),
-  role:z.enum(["trader","operator"],{
-    errorMap:()=>({ message: "Select Trader or Operator"}),
-  }),
+  role:z.enum(["trader","operator"]),
 });
