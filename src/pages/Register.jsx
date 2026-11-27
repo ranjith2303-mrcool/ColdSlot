@@ -14,7 +14,6 @@ function Register() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h2>Register</h2>
-
       <label htmlFor="name">Name</label>
       <input id="name"type="text" placeholder="Enter your name"{...register("name")}/>
       <p>{errors.name?.message}</p>

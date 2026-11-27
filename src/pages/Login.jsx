@@ -14,14 +14,14 @@ function Login() {
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>Login</h2>
-      <label htmlFor="email">Email</label>
-      <input id="email" type="email" placeholder="Enter your email" {...register("email")} />
-      <p>{errors.email?.message}</p>
-      <label htmlFor="password">Password</label>
-      <input id="password" type="password" placeholder="Enter your password" {...register("password")} />
-      <p>{errors.password?.message}</p>
-      <button type="submit">Login</button>
+       <h2>Login</h2>
+       <label htmlFor="email">Email</label>
+       <input id="email" type="email" placeholder="Enter your email" {...register("email")} />
+       <p>{errors.email?.message}</p>
+       <label htmlFor="password">Password</label>
+       <input id="password" type="password" placeholder="Enter your password" {...register("password")} />
+       <p>{errors.password?.message}</p>
+       <button type="submit">Login</button>
     </form>
   );
 }
