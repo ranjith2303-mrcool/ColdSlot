@@ -1,11 +1,11 @@
-function AdminDashboard(){
-    return(<>
-        <div className="AdminDashboard text-red-400">ADMIN DASHBOARD</div>
-        <div>
-            <h2>😎Welcome to Admin DashBoard 🤗</h2>
-             <h1>This is admin dashboard🤠</h1>
+function AdminDashboard() {
+    return (
+        <div className="rounded-lg bg-white p-6 shadow">
+            <h2 className="mb-4 text-2xl font-bold text-gray-800">Admin Dashboard</h2>
+             <h2>😎Welcome to Admin DashBoard 🤗</h2>
+            <p className="text-gray-600"> Admin details will be displayed here.
+            </p>
         </div>
-        </>
-    )
+    );
 }
-export default AdminDashboard
+export default AdminDashboard;

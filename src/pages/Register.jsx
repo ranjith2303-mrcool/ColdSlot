@@ -5,7 +5,7 @@ import { RegisterSchema } from "../components/Formschema/RegisterSchema";
 function Register() {
   const navigate = useNavigate();
   const {register,handleSubmit,formState: { errors },} = useForm({
-    resolver: zodResolver(Registerschema),
+    resolver: zodResolver(RegisterSchema),
   });
   function onSubmit(data) {console.log(data);
     alert("Register Success"); 
@@ -27,10 +27,8 @@ function Register() {
       <input id="age" type="number" placeholder="Enter your age" {...register("age")} />
       <p>{errors.age?.message}</p>
       <label htmlFor="role">Register as</label>
-      <label>
-        <input type="radio" value="trader" {...register("role")} />Trader</label>
-      <label>
-        <input type="radio" value="operator" {...register("role")} />Operator</label>
+      <label><input type="radio" value="trader" {...register("role")} />Trader</label>
+      <label><input type="radio" value="operator" {...register("role")} />Operator</label>
       <p>{errors.role?.message}</p>
       <button type="submit">Submit</button>
     </form>
