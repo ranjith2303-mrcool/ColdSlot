@@ -6,6 +6,7 @@ import AdminDashboard from './pages/admin/AdminDashboard'
 import OperatorDashboard from './pages/operator/OperatorDashboard'
 import TraderDashboard from './pages/trader/TraderDashboard'
 import MyLots from './pages/trader/MyLots'
+import StorageBooking from './pages/trader/StorageBooking'
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/operator" element={<OperatorDashboard />} />
         <Route path="/trader" element={<TraderDashboard />} />
         <Route path="/myLots" element={<MyLots />} />
+        <Route path="/storageBookings" element={<StorageBooking />} />
       </Routes>
     </BrowserRouter>
   )
