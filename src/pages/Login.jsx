@@ -23,6 +23,6 @@ function Login() {
        <p>{errors.password?.message}</p>
        <button type="submit">Login</button>
     </form>
-  );
+   );
 }
 export default Login;

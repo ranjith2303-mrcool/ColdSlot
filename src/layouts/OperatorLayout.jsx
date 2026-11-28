@@ -1,5 +1,4 @@
 import { Link, Outlet } from "react-router-dom";
-
 function OpreatorLayout () {
     return ( 
         <div className="min-h-screen bg-gray-100">

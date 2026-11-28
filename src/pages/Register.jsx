@@ -32,6 +32,6 @@ function Register() {
       <p>{errors.role?.message}</p>
       <button type="submit">Submit</button>
     </form>
-  );
+   );
 }
 export default Register;

@@ -4,7 +4,7 @@ function Inventory() {
             <h2 className="mb-4 text-2xl font-bold text-gray-800">Inventory Layout</h2>
             <p className="text-gray-600">Inventory details will be displayed here..........</p>
         </div>
-     );
+    );
 }
 
 export default Inventory;

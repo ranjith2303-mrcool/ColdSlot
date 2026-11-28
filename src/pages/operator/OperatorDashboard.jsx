@@ -7,6 +7,6 @@ function OperatorDashboard(){
              <p className="text-gray-600">Operator details will be displayed here.</p>
         </div>
         </>
-    )
+     );
 }
-export default OperatorDashboard
+export default OperatorDashboard;

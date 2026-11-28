@@ -4,7 +4,7 @@ function AdminLayout() {
     return ( 
         <div className="min-h-screen bg-gray-100">
             <header className="bg-blue-900 p-4 text-white">
-                <h1 className="text-2x1 front-bold">ColdSlot Admin Layout</h1>
+                 <h1 className="text-2x1 front-bold">ColdSlot Admin Layout</h1>
             </header>
             <nav className="flex gap-6 bg-white p-4 shadow">
                 <Link to="AdminDashboard" className="text-blue-700 hover:uderline">Admin Dashboard</Link>

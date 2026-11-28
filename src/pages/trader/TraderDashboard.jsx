@@ -6,6 +6,6 @@ function TraderDashboard(){
             <p className="text-gray-600">Trader DashBoard Welcomes's You!!❤️🎉<br></br>Your storage bookings, lots, and billing details will be displayed here....</p> 
         </div>
         </>
-    )
+    );
 }
-export default TraderDashboard
+export default TraderDashboard;

@@ -4,6 +4,6 @@ function Home() {
        <h1>Welcome to ColdSlot</h1>
        <p>Cold Storage Management System</p>
     </div>
-  )
+  );
 }
-export default Home
+export default Home;
